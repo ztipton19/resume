@@ -26,49 +26,13 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
         
-        /* Print button */
-        .print-button {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-            transition: all 0.3s;
-            z-index: 1000;
-        }
         
         .print-button:hover {
             background: #5568d3;
             transform: translateY(-2px);
         }
         
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-                max-width: 100%;
-            }
-            .print-button {
-                display: none;
-            }
-            a {
-                color: #333 !important;
-                text-decoration: none !important;
-            }
-            .clickable-tag::after {
-                display: none;
-            }
-        }
-        
+       
         /* Header */
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -283,12 +247,6 @@
                 grid-template-columns: 1fr;
             }
             
-            .print-button {
-                position: static;
-                margin: 0 auto 20px;
-                display: block;
-                width: fit-content;
-            }
         }
         
         /* Tooltip for clickable items */
@@ -313,7 +271,6 @@
     </style>
 </head>
 <body>
-    <button class="print-button" onclick="window.print()">🖨️ Print / Save PDF</button>
     
     <div class="container">
         <!-- Header -->
